@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size: 11.5px;
+    line-height: 1.5em;
+}
+
+.container{
+    margin-top: 1.5em;
+    min-width: 300px;
+    padding: 0.5em;
+    width: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Ver esto */
+.clip-path {
+    background-color: #ECD018;
+    position: absolute;
+    width: 71%;
+    height: 90%;
+    top: -8px;
+    left: -8px;
+    z-index: -1;
+    clip-path: circle(40.7% at 0 3%);
+}
+
+.items__one--margin{
+    z-index: 20;
+}
+
+.items, .cart{
+    
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px 3px rgba(0,15,14,0.24);
+    height: 550px;
+    margin-top: 1.5em;
+    min-width: 280px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 1.5em;
+    position: relative; /* Ver después */
+    width: 300px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    margin: 1em 0;
+}
+
+.items__title{
+    margin-top: 1em;
+    margin-bottom: 1.2em;
+}
+
+.items__description{
+    margin-top: 0.5em;
+}
+
+.items__one,
+.items__two,
+.items__three,
+.items__four{
+    margin-bottom: 2.5em;
+}
+
+.items__img-one,
+.items__img-two,
+.items__img-three,
+.items__img-four{
+    border-radius: 15px;
+    height: 280px;
+    width: 220px;
+}
+
+.items__img-one{
+    background-color: #E7E6F3;
+}
+
+.items__img-two{
+    background-color: #4D3080;
+}
+
+.items__img-three{
+    background-color: #EAD029;
+}
+
+.items__img-four{
+    background-color: #CECDCF;
+}
+
+.img-one{
+    width: 100%;
+    rotate: -25deg;
+    translate: -12px;
+}
+
+.img-two{
+    width: 78%;
+    rotate: 14deg;
+    translate: 20px 38px;
+}
+
+.img-three{
+    width: 125%;
+    rotate: -28deg;
+    translate: -35px 38px;
+}
+
+.img-four{
+    width: 92%;
+    rotate: -28deg;
+    translate: 0px 65px;
+}
+
+.items__price{
+    margin-top: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Etilos del botón*/
+button strong{
+    font-size: 10px;
+}
+
+button{
+    background-color: #ECD018;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px 2px rgba(0,15,14,0.18);
+    cursor: pointer;
+    height: 3em;
+    padding: 0.4em;
+    position: relative;
+    transition: width .5s, border-radius .5s;
+    width: 8em;
+}
+
+button *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.icon{
+    opacity: 0;
+}
+
+button:focus{
+    width: 46px;
+    border-radius: 50%;
+}
+
+button:focus .text{
+    opacity: 0;
+}
+
+button:focus .icon{
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+
